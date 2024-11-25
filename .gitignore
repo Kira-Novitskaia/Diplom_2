@@ -3,18 +3,10 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 ### Игнорируем папку .allure###
-
-# Исключаем временные файлы Allure
-allure-results/
-
-# Включаем готовый отчёт Allure
-!allure-report/
+.allure
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+.idea/*
 *.iws
 *.iml
 *.ipr
