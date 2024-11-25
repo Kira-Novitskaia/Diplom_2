@@ -1,21 +1,16 @@
-### Maven ###
-/target/                     # Игнорируем весь каталог target
+target/
 !.mvn/wrapper/maven-wrapper.jar
-!target/site/                # Включаем каталог site внутри target
-!target/site/jacoco/         # Включаем отчёты JaCoCo в target/site/jacoco/
-!**/src/main/**/target/      # Включаем target в src/main
-!**/src/test/**/target/      # Включаем target в src/test
-!target/site/allure-report/  # Включаем target в src/test
-### Gradle ###
-/build/                      # Игнорируем каталог build
-.gradle/
-!**/src/main/**/build/       # Включаем build в src/main
-!**/src/test/**/build/       # Включаем build в src/test
+!**/src/main/**/target/
+!**/src/test/**/target/
+### Игнорируем папку .allure###
+
+# Исключаем временные файлы Allure
+allure-results/
+
+# Включаем готовый отчёт Allure
+!allure-report/
 
 ### IntelliJ IDEA ###
-.idea/                       # Игнорируем настройки IntelliJ IDEA
-/shelf/
-.idea/workspace.xml
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
@@ -29,7 +24,7 @@
 .classpath
 .factorypath
 .project
-.settings/
+.settings
 .springBeans
 .sts4-cache
 
@@ -39,42 +34,12 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
 
 ### Mac OS ###
 .DS_Store
-Thumbs.db
-
-### Allure ###
-allure-results/              # Игнорируем временные файлы Allure
-!allure-report/              # Включаем готовый отчёт Allure
-
-### Java ###
-*.class                      # Игнорируем скомпилированные Java классы
-*.tmp
-*.bak
-*.swp
-
-### Логи и временные файлы ###
-*.log                        # Игнорируем файлы логов
-*.out
-*.coverage
-
-### JaCoCo ###
-jacoco.exec                  # Игнорируем временные файлы JaCoCo
-!target/site/jacoco/         # Включаем отчёты JaCoCo
-
-### Локальные конфигурации ###
-*.properties
-*.yml
-*.yaml
-*.env
-*.local
-
-### Docker ###
-docker-compose.override.yml
-
-### Файлы ОС ###
-*.~*
