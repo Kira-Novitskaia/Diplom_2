@@ -1,0 +1,5 @@
+tests\OrderCreationTests.class
+tests\UserCreationTests.class
+tests\UserLoginTests.class
+tests\OrderRetrievalTests.class
+tests\UserUpdateTests.class
